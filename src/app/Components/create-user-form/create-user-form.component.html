@@ -81,10 +81,10 @@
                         </div>
                     </div>
                     <div *ngIf = "!isAnUpdate">
-                        <button type="button" class="btn btn-sm bg-info"  (click) = "on_create_user_clicked()">{{buttonName}}</button>
+                        <button type="button" class="btn btn-sm bg-info" [disabled]="registerUser.invalid" (click) = "on_create_user_clicked()">{{buttonName}}</button>
                     </div>
                     <div *ngIf = "isAnUpdate">
-                        <button type="button" class="btn btn-sm bg-info"  (click) = "on_update_user_clicked()">{{buttonName}}</button>
+                        <button type="button" class="btn btn-sm bg-info" [disabled]="registerUser.invalid" (click) = "on_update_user_clicked()">{{buttonName}}</button>
                     </div>
               </form>
            </div>

@@ -100,6 +100,13 @@ set_user_role_in_dropDown_list(){
 
 
 on_create_user_clicked(){
+        
+      if(this.selectedRoleValue==0){
+          this.messageError="Please set the role of user"
+          this.messageSucess=null
+          return
+        }
+        
     this.userServices.saveUser(this.registerUser.value).subscribe(res => {
       if(res.id !=null && res.id!=0){
         this.userRole_JsonObject = {"role" : {"id": this.selectedRoleValue},
@@ -220,7 +227,6 @@ print_error_message(error:any){
   }
 
   getSelectedValue(event : any){
-    console.log(event.target.value)
       this.selectedRoleValue=event.target.value
        return this.selectedRoleValue;
   }
