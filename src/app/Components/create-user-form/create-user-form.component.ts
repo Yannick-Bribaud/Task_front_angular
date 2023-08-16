@@ -106,7 +106,7 @@ on_create_user_clicked(){
           this.messageSucess=null
           return
         }
-        
+
     this.userServices.saveUser(this.registerUser.value).subscribe(res => {
       if(res.id !=null && res.id!=0){
         this.userRole_JsonObject = {"role" : {"id": this.selectedRoleValue},
@@ -120,7 +120,6 @@ on_create_user_clicked(){
         this.messageSucess="User successfully created!"
         this.messageError=null
       }
-      
     },(error) =>{
         if(error.status==422){
           this.messageError="Make sure you fill in all fields. If this is not the problem, the username may already exist in database."
@@ -146,7 +145,7 @@ on_update_user_clicked(){
 
               if(response.id!=null && response.id!=0){
                   this.create_user_role(response)
-                  this.add_new_and_takeOff_old_role()
+                  this.add_new_role_and_takeOff_the_old()
                   this.print_successful_message(response)
               }
             },(error)=>{
@@ -187,7 +186,7 @@ create_user_role(response:any){
 }
 
 
-add_new_and_takeOff_old_role(){
+add_new_role_and_takeOff_the_old(){
   this.userRoleServices.saveUserAndRole(this.userRole_JsonObject).subscribe((res:any)=>{},(error)=>{
     this.messageError = error.message
     this.messageSucess=null

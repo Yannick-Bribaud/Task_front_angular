@@ -8,7 +8,7 @@ export class RolesService {
 
   endpoint : string = `http://localhost:8080/api/role/`
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient) {}
 
   getAllRoles(){
     return this.http.get(this.endpoint +'list')

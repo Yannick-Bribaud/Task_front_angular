@@ -13,12 +13,10 @@
     background-size: cover;
     background-repeat:no-repeat;
     height: 1000px;
-    
   }
   
   .container{
     margin-top: 0px;
-    
   }
 
   .card{
@@ -74,9 +72,7 @@
     text-align: center;
     border: 2px solid black;
     size: 12px;
-    border-collapse: collapse;
-  
-    
+    border-collapse: collapse;    
   }
 
 

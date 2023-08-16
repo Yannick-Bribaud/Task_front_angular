@@ -47,7 +47,7 @@ constructor(private taskServices : TaskService, private dataService: ShareDataSe
 }
 
 private fetch_all_owners(){
-  this.taskServices.get_Owner_list().subscribe((response : any) =>{
+  this.taskServices.get_owner_list().subscribe((response : any) =>{
   this.allOwers = response;
 },(error)=>{
   if(error.status==401){
@@ -59,7 +59,7 @@ private fetch_all_owners(){
 }
 
 private fetch_all_creator(){
-  this.taskServices.get_Creator_list().subscribe((responses: any) => {
+  this.taskServices.get_creator_list().subscribe((responses: any) => {
   this.allCreators = responses;
 },(error)=>{
   if(error.status==401){

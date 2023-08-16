@@ -27,11 +27,11 @@ export class TaskService {
     return this.http.delete(this.endpoint + 'delete/'+taskId)
   }
 
- get_Owner_list(){
+ get_owner_list(){
     return this.http.get(this.endpoint + 'listOwners')
  }
 
- get_Creator_list(){
+ get_creator_list(){
   return this.http.get(this.endpoint + 'listCreators')
  }
 

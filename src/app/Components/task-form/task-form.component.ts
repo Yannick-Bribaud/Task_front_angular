@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 
 
 
-
 @Component({
   selector: 'app-task-form',
   templateUrl: './task-form.component.html',
@@ -103,6 +102,7 @@ on_create_task_click(){
 
 
 on_update_task_click(){
+      
       this.set_owner_and_creator_in_register()
 
       this.taskServices.updateTask(this.registerTask.value).subscribe((res:any)=>{
@@ -157,12 +157,12 @@ get_list_owner(){
       })
    }
 
-  getisChecked_active(event: any) {
+  getisChecked_active(event:any) {
     this.isChecked_active = event.target.value
     return this.isChecked_active
   }
 
-  getSelectedValue(event : any){
+  getSelectedValue(event:any){
     this.selectedTaskOwnerValue=event.target.value
      return this.selectedTaskOwnerValue;
    }
@@ -171,7 +171,7 @@ get_list_owner(){
     if(this.messageSucess!=null){
     this.messageSucess=null
     return
-  } 
+    } 
   this.messageError=null
   }
 

@@ -72,7 +72,6 @@ on_modify_clicked(){
 }
 
 on_delete_user_clicked(){
-  console.log(this.user_id)
   this.userServices.deleteUserById(this.user_id).subscribe((res:any)=>{
         this.actionVisible=false
   },(error)=>{
