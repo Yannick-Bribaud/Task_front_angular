@@ -1,0 +1,165 @@
+.listTask{
+    margin-bottom: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    color: white;
+    
+}
+
+.outer{ 
+    margin: 0;
+    padding: 40px;
+    background-image: url("src/assets/firstImag.avif");
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 1000px;
+    
+  }
+  
+  .container{
+    margin-top: 0px;
+    
+  }
+
+  .card{
+    padding: 2px;
+    background-color: black;
+    border-left: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-top: 4px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+  }
+
+  .card-header{
+    margin-top: 0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-left: 0px;
+    background-color: cyan;
+    color: rgb(100,90,0);
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  th{
+    text-align: center;
+    font-weight: bold;
+    background-color: cyan;
+    color: rgb(100,90,0);
+    font-family:'Times New Roman';
+  }
+
+  table{
+      width: 100%;
+      text-align: center;
+      font-family: 'Times New Roman';
+      font-size: 20px;
+      border: 3px solid;
+      
+  }
+
+  th{
+    text-align: center;
+    border: 2px solid black;
+  }
+
+
+  td{
+    text-align: center;
+    border: 2px solid black;
+    size: 12px;
+    border-collapse: collapse;
+  
+    
+  }
+
+
+  caption{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+  }
+
+.TagHeader{
+  font-size: 25px;
+  font-weight:bolder;
+  background-color: cyan;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family:'Times New Roman';
+  color: rgb(100,90,0);
+  border: 3px solid white;
+  border-bottom: none;
+}
+
+.row{
+  background-color:cyan;
+  width: 610px;
+  border-radius: 10px;
+  padding: 0px;
+  border: 3px solid white;
+  width: 355px;
+  padding: 0px;  
+  height: 65px;
+  background-color: transparent;
+  border: none;
+}
+
+.btnlist{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  width: 160px;
+  height: 60px;
+  border-radius: 1px;
+  margin-right: 4px;
+  border-radius: 10px;
+  font-family:'Times New Roman';
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.btnlist:hover{
+  background-color: cyan;
+  color: rgb(100,90,0);
+}
+
+.action_div_top{
+  background-color: transparent;
+}
+
+.actions{
+  padding: 3px;
+  margin-left: 0px;
+  align-content: center;
+  border-radius: 12px;
+  background-color: cyan;
+  width: 165px;
+  background-color: transparent;
+  
+}
+
+.DesableBtn{
+  padding: 3px;
+  margin-left: 0px;
+  align-content: center;
+  border-radius: 12px;
+  width: 165px;
+  background-color: transparent;
+  
+}
+
+.error_msg{
+  height: 15px;
+  font-size: 15px;
+  text-align: center;
+  color: red;
+}

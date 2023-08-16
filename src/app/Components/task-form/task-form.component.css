@@ -1,0 +1,174 @@
+.outer{ 
+    margin: 0;
+    padding: 40px;
+    background-image: url("src/assets/firstImag.avif");
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 900px;
+    
+  }
+  
+  .container{
+    margin-top: 0px;
+  }
+
+  .btn{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    transition-duration: 0.7s;
+    border-radius: 3px;
+    color: rgb(100,90,0);
+  }
+
+  .btn:hover{
+    color: darkcyan;
+    border: 5px solid;
+    border-radius: 8px;
+  }
+
+  .card-header{
+    background-color: cyan;
+    color: rgb(100,90,0);
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .card-footer{
+    background-color: cyan;
+    color: rgb(100,90,0);
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    padding: 0px;
+    margin-bottom: 0px;
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .card{
+    padding: 10px;
+    background-color: black;
+    border-left: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-top: 5px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    
+  }
+  
+  .gdt{
+    text-align: right;
+  }
+  
+  .msg_sp{
+    font-size: 12px;
+    height: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .taskActive{
+    text-align: center;
+    font-size: 23px;
+    width: 120px;
+    margin-top: 0px;
+  
+  }
+  
+  .taskActiveInput{
+    margin: 5px;
+  }
+  
+  #select{
+    width: 295px;
+    text-align: center;
+  }
+  .selectLabel{
+    margin-left: 5px;
+    width: 150px;
+    font-size: 19px;
+    text-align: left;
+  }
+
+  textarea{
+    width: 650px;
+    height: 100px;
+  }
+
+
+  .form-control{
+    background-color: transparent;
+  }
+
+
+  .dateInput{ 
+    color: white;
+  }
+
+  .taskName{
+     background-color: white;
+  }
+
+  .descriptionTask{
+    background-color: white;
+  }
+
+  .error_msg{
+    height: 15px;
+    font-size: 15px;
+    text-align: center;
+    color: red;
+    line-height: 3%;
+}
+
+.sucess_msg{
+  height: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: lightgreen;
+  color: rgb(100,90,0);
+  line-height: 3%;
+}
+
+.btn_cancel{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 9px;
+    height: 42px;
+    font-size: 16px;
+    border-radius: 40px;
+    width: 25px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.btn_cancel:hover{
+    background-color: cyan;
+    color : rgb(100,90,0);
+    font-weight: bold;
+    transition: 0.75s;
+}
+
+
+  
+  /*input[type=password],
+  input[type=text]{ 
+      border-top: black ;
+      border-left: black ;
+      border-right: black ;
+      border-left: black ;
+      border-bottom: 2px solid white ;
+      border-radius: 3px;
+      background-color: black;
+      color: white;
+      
+    }*/
+  
+  
+  
+  

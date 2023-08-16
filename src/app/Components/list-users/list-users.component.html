@@ -1,0 +1,54 @@
+<div class="outer">
+    <div class="container-fluid">
+        <div class="card" >
+            <div class="card-header" >
+                USER LIST
+            </div>
+            <article class="listTask" data-theme="dark"> 
+              <p class="error_msg alert alert-danger" *ngIf = "messageError!=null">{{messageError}}</p>
+              <div class="action_div_top row offset-md-8 mb-2" *ngIf = "actionVisible">
+                <div class="actions col-md-6">
+                  <button class="btnlist btn-sm " type="button" (click)="on_modify_clicked()">Edit user</button>
+                </div>
+                
+                <div class="DesableBtn col-md-6">
+                  <button class="btnlist btn-sm" type="button" (click) = "on_delete_user_clicked()">Desable user</button>
+                </div>                
+              </div>
+             <div>
+              <div class="TagHeader col-md-3 offset-md-0">User board</div>
+                <table class="table table-hover table-bordered table-dark">
+                    <thead>
+                      <tr>
+                        <th style="width:20px;"  scope="col">#</th>
+                        <th style="width:80px;"  scope="col">First name</th>
+                        <th style="width:100px;" scope="col">Last name</th>
+                        <th style="width:75px;"  scope="col">Username</th>
+                        <th style="width:80px;"  scope="col">Enable</th>
+                        <th style="width:100px;" scope="col">Account Locked</th>
+                        <th style="width:100px;" scope="col">Password Expired</th>
+                        <th style="width:100px;" scope="col">Account Expired</th>
+                        <th style="width:100px;" scope="col">Is user deleted</th>
+                        <th style="width:50px;"  scope="col">ROLE</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor = "let user of list_users; let i = index">
+                        <th scope="row">{{i+1}}</th>
+                        <td (dblclick) = "on_row_clicked(user,list_user_role[i])" (click)="hide_actions_buttons()">{{user.firstName}}</td>
+                        <td (dblclick) = "on_row_clicked(user,list_user_role[i])" (click)="hide_actions_buttons()">{{user.lastName}}</td>
+                        <td (dblclick) = "on_row_clicked(user,list_user_role[i])" (click)="hide_actions_buttons()">{{user.username}}</td>
+                        <td (dblclick) = "on_row_clicked(user,list_user_role[i])" (click)="hide_actions_buttons()">{{user.enabled}}</td>
+                        <td (dblclick) = "on_row_clicked(user,list_user_role[i])" (click)="hide_actions_buttons()">{{user.accountLocked}}</td>
+                        <td (dblclick) = "on_row_clicked(user,list_user_role[i])" (click)="hide_actions_buttons()">{{user.passwordExpired}}</td>
+                        <td (dblclick) = "on_row_clicked(user,list_user_role[i])" (click)="hide_actions_buttons()">{{user.accountExpired}}</td>
+                        <td (dblclick) = "on_row_clicked(user,list_user_role[i])" (click)="hide_actions_buttons()">{{user.isDeleted}}</td>
+                        <td (dblclick) = "on_row_clicked(user,list_user_role[i])" (click)="hide_actions_buttons()">{{list_user_role[i]}}</td> 
+                      </tr>
+                    </tbody>
+                  </table>
+             </div>
+        </article>
+    </div>
+</div>
+</div>

@@ -1,0 +1,141 @@
+.outer{ 
+  margin: 0;
+  padding: 40px;
+  background-image: url("src/assets/firstImag.avif");
+  background-size: cover;
+  background-repeat:no-repeat;
+  height: 900px;
+  
+}
+
+.container{
+  margin-top: 0px;
+  
+}
+.btn{
+  margin-left: 975px;
+  /**margin-top: 15px;**/
+  width: 200px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn:hover{
+  color: rgb(100,90,0);
+}
+
+.card-header{
+  background-color: cyan;
+  color: rgb(100,90,0);
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.card-footer{
+  background-color: cyan;
+  color: rgb(100,90,0);
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  height: 40px;
+  padding: 0px;
+  margin-bottom: 0px;
+  display: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+.card{
+  padding: 10px;
+  background-color: black;
+  border-left: 5px solid rgb(255, 255, 255);
+  border-right: 5px solid rgb(255, 255, 255);
+  border-bottom: 5px solid rgb(255, 255, 255);
+  border-top: 5px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  
+}
+
+.gdt{
+  text-align: right;
+}
+
+.fName{
+  font-size: 13px;
+}
+
+.enable{
+  text-align: center;
+  font-size: 15px;
+
+}
+
+.accLocked{
+  text-align: center;
+  font-size: 14px;
+  width: 105px;
+}
+
+.pwdExp{
+  text-align: center;
+  font-size: 14px;
+  width: 115px;
+}
+
+.accExp{
+  text-align: center;
+  font-size: 14px;
+  width: 115px;
+}
+
+#select{
+  width: 250px;
+}
+.selectLabel{
+  margin-left: 30px;
+  width: 120px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.error_msg{
+    height: 15px;
+    font-size: 15px;
+    text-align: center;
+    color: red;
+    line-height: 3%;
+}
+
+.sucess_msg{
+  height: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: lightgreen;
+  color: rgb(100,90,0);
+  line-height: 3%;
+}
+
+.btn_cancel{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 9px;
+    height: 42px;
+    font-size: 16px;
+    border-radius: 40px;
+    width: 25px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.btn_cancel:hover{
+    background-color: cyan;
+    color : rgb(100,90,0);
+    font-weight: bold;
+    transition: 0.75s;
+}
+
+
+
+
+

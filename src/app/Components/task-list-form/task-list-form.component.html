@@ -1,0 +1,49 @@
+<div class="outer">
+    <div class="container-fluid">
+        <div class="card" >
+            <div class="card-header" >
+                TASK LIST
+            </div>
+            <article class="listTask" data-theme="dark"> 
+              <p class="error_msg alert alert-danger" *ngIf = "messageError!=null">{{messageError}}</p>
+              <div class="row offset-md-8 mb-2" *ngIf = "actionVisible"  >
+                <div class="actions col-md-6">
+                  <button class="btnlist btn-sm" type="button" (click)="on_modify_clicked()">Edit task</button>
+                </div>
+                
+                <div class="DesableBtn col-md-6">
+                  <button class="btnlist btn-sm" type="button" (click) = "delete_task()">Desable task</button>
+                </div>                
+              </div>
+             <div>
+              <div class="TagHeader col-md-3 offset-md-0">Task board</div>
+                <table class="table table-hover table-bordered table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Task name</th>
+                        <th scope="col">Start date </th>
+                        <th scope="col">End date</th>
+                        <th style="height: 280;" scope="col">Description</th>
+                        <th style="width: 150px;" scope="col">Owner</th>
+                        <th style="width: 150px;" scope="col">Creator</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr claas ="taskTr" *ngFor = "let task of allTasks; let i =index" >
+                        <th scope="row"> {{i+1}}</th>
+                        <td (dblclick) = "on_row_clicked(task,i)" (click)="hide_actions_buttons()">{{task.nameTask}}</td>
+                        <td (dblclick) = "on_row_clicked(task,i)" (click)="hide_actions_buttons()">{{task.dateTaskCreated | date:"medium" }}</td>
+                        <td (dblclick) = "on_row_clicked(task,i)" (click)="hide_actions_buttons()">{{task.dateTaskMade | date:"medium"}}</td>
+                        <td (dblclick) = "on_row_clicked(task,i)" (click)="hide_actions_buttons()">{{task.descriptionTask}}</td>
+                        <td (dblclick) = "on_row_clicked(task,i)" (click)="hide_actions_buttons()">{{allOwers[i].firstName}} {{allOwers[i].lastName}}</td>
+                        <td (dblclick) = "on_row_clicked(task,i)" (click)="hide_actions_buttons()">{{allCreators[i].firstName}} {{allCreators[i].lastName}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+             </div>
+        </article>
+    </div>
+</div>
+</div>
+

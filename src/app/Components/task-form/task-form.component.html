@@ -1,0 +1,72 @@
+<div class="outer">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header" >
+                REGISTER TASK
+            </div>
+            <article data-theme="dark">
+                <div class="row" *ngIf = "messageSucess!=null">
+                    <p class="sucess_msg alert alert-success col-md-10 offset-md-1"> {{messageSucess}}</p>
+                    <div class="notif_div col-md-1"><button class="btn_cancel" (click) = "hideNotif()">X</button></div>
+                </div>
+                <div class="notif row" *ngIf = "messageError!=null">
+                    <p class="error_msg alert alert-danger col-md-10 offset-md-1">{{messageError}}</p>
+                    <div class="notif_div col-md-1"><button class="btn_cancel" (click) = "hideNotif()">X</button></div>
+                </div>
+            <div class="card-body" >
+                <form [formGroup] = "registerTask">
+                    <div class="row">
+                        <div class="col-md-7 mb-3" data-theme="dark">
+                            <label for="Task name">Name</label>
+                            <input type="text" class="taskName form-control" placeholder="Enter your task name" formControlName="nameTask"  />
+                            <span class="msg_sp" style="color: red" *ngIf = "nameTask && nameTask.invalid && nameTask.touched" >{{invalidInput +" Size of characters must be [51>characters>=5]"}}</span>
+                        </div>
+                        <div class="col-md-1 mb-3 offset-md-2"*ngIf="!isAnUpdate">
+                            <label class="selectLabel" for="select">Attribute to: </label>
+                                <select (change)="getSelectedValue($event)"  id="select" name ="select">
+                                    <option value=0 selected> Select owner</option>
+                                    <option *ngFor="let item of listOwner" [value]="item.id">{{item.firstName}} {{item.lastName}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 mb-3 offset-md-2" *ngIf="isAnUpdate">
+                            <label class="selectLabel" for="select">Attribute to: </label>
+                                <select (change)="getSelectedValue($event)"  id="select" name ="select">
+                                    <option value=1 > Select owner</option>
+                                    <option *ngFor="let item of listOwner" [value]="item.id" [selected]="item.id==owner_id">{{item.firstName}} {{item.lastName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3" data-theme="dark">
+                            <label for="dateInput">Start date of Task</label>
+                            <input class="dateInput form-control" type="date" id="date" name="date" formControlName ="dateTaskCreated"/>
+                            <span class = "msg_sp" style="color: red" *ngIf = "dateTaskCreated && dateTaskCreated.invalid && dateTaskCreated.touched">{{invalidInput}}</span>
+                        </div>
+                        <div class="col-md-4 mb-3 offset-md-1">
+                            <label for="dateInput">End date of Task</label>
+                            <input class="dateInput form-control" type="date" id="date" name="date" formControlName ="dateTaskMade" />
+                            <span class = "msg_sp" style="color: red" *ngIf = "dateTaskMade && dateTaskMade.invalid && dateTaskMade.touched">{{invalidInput}}</span>
+                        </div>
+                        <div class="col-md-1 mt-3 offset-md-1">
+                            <label class="taskActive" for="switch-isActiveTask">Active<input class ="taskActiveInput" type="checkbox" formControlName="isActive" id="switch-isActiveTask" role="switch" checked /> </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label class="taskDescription"  for="Task description">Description</label>
+                            <textarea type="text" class="descriptionTask form-control" placeholder="Enter your task description here" formControlName="descriptionTask"></textarea>
+                            <span class = "msg_sp" style="color: red" *ngIf = "descriptionTask && descriptionTask.invalid && descriptionTask.touched">{{invalidInput +" Size of characters must be [151>characters>=5]"}}</span>
+                        </div>
+                        <div class="col-md-3 mt-5 offset-md-4" data-theme="dark" *ngIf = "!isAnUpdate">
+                            <button type="button" class="btn btn-sm bg-info" [disabled]="registerTask.invalid" (click) = "on_create_task_click()">{{ButtonName}}</button>
+                        </div>
+                        <div class="col-md-3 mt-5 offset-md-4" data-theme="dark" *ngIf = "isAnUpdate">
+                            <button type="button" class="btn btn-sm bg-info" [disabled]="registerTask.invalid" (click) = "on_update_task_click()">{{ButtonName}}</button>
+                        </div>
+                    </div>
+              </form>
+           </div>
+       </article>
+     </div>
+  </div>
+</div>

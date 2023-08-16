@@ -1,0 +1,19 @@
+<div class="outer">
+    <div class="container-fluid">
+        <div class="card" >
+            <div class="card-header" >
+                TASK TOOL
+            </div>
+            <article class="taskPage" data-theme="dark">
+                <div class="row">
+                    <div class="adminTool col-md-4 offset-md-1 " *ngIf = "ROLE=='ROLE_CREATOR'">
+                        <button type="button" class="btn btn-sm bg-info" (click)="on_create_task_clicked()">Create task</button>
+                    </div>
+                    <div class="col-md-4 offset-md-2">
+                        <button type="button" class="btn btn-sm bg-info" (click) = "on_task_list_clicked()">Task list</button>
+                    </div>
+                </div>
+        </article>
+    </div>
+</div>
+</div>

@@ -1,0 +1,96 @@
+<div class="outer">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header" >
+                REGISTER USER
+            </div>
+            <article data-theme="dark"> 
+                <div class="row" *ngIf = "messageSucess!=null">
+                    <p class="sucess_msg alert alert-success col-md-10 offset-md-1"> {{messageSucess}}</p>
+                    <div class="notif_div col-md-1"><button class="btn_cancel" (click) = "hideNotif()">X</button></div>
+                </div>
+                <div class="notif row" *ngIf = "messageError!=null">
+                    <p class="error_msg alert alert-danger col-md-10 offset-md-1">{{messageError}}</p>
+                    <div class="notif_div col-md-1"><button class="btn_cancel" (click) = "hideNotif()">X</button></div>
+                </div>
+                
+            <div class="card-body" >
+                <form [formGroup] = "registerUser">
+                    <div class="row">
+                        <div class="col-md-6 mb-3" data-theme="dark">
+                            <label for="firstname">First name</label>
+                            <input type="text" class="form-control" placeholder="First name" formControlName="firstName"/>
+                            <span class = "fName" style="color: red" *ngIf = "firstName && firstName.invalid && firstName.touched">
+                                {{invalidInput}}
+                            </span>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastname">Last name</label>
+                            <input type="text" class="form-control" placeholder="Last name" formControlName="lastName" >
+                            <span class = "fName" style="color: red" *ngIf = "lastName && lastName.invalid && lastName.touched">
+                                {{invalidInput}}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3" data-theme="dark">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" placeholder="username" formControlName="username" >
+                            <span class = "fName" style="color: red" *ngIf = "username && username.invalid && username.touched">
+                                {{invalidInput}}
+                            </span>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="password">Password</label>
+                            <input [type]="type" class="form-control" placeholder="password" formControlName="password" >
+                                <p class ="HideIcone">
+                                <span (click) = "HideOrShowPassword()" class="fa {{eyeIcon}}">{{iconeText}}</span>
+                                </p>
+                            <span class = "fName" style="color: red" *ngIf = "password && password.invalid && password.touched">
+                                {{invalidInput}}</span>
+                        </div>
+                        <div class="col-md-1 mb-2 offset-md-1" *ngIf="!isAnUpdate">
+                            <label class="selectLabel" for="select">Grant Role</label>
+                                <select (change)="getSelectedValue($event)"  id="select" name ="select">
+                                    <option *ngFor="let item of listRoles" [value]="item.id"  [selected]="item.id==1">
+                                        {{item.authority}}
+                                    </option>
+                            </select>
+                        </div>
+                        <div class="col-md-1 mb-2 offset-md-1" *ngIf = "isAnUpdate">
+                            <label class="selectLabel" for="select">Grant Roles</label>
+                                <select (change)="getSelectedValue($event)"  id="select" name ="select">
+                                    <option *ngFor="let item of listRoles" [value]="item.id"  [selected]="item.authority==user_char_authority">
+                                        {{item.authority}}
+                                    </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 mb-3">
+                            <label class="enable" for="switch-enable">Enable<input (change) = "getIsChecked_enable($event)" type="checkbox" formControlName="enable"  id="switch-Enable" role="switch" checked /> </label>
+                        </div>
+                        <div class="col-md-1 mb-3 offset-md-1">
+                            <label class="accLocked" for="switch-accountLocked">Account locked<input (change) = "getIsChecked_accountLocked($event)"  type="checkbox" formControlName="accountLocked" id="switch-accountLocked" role="switch" /> </label>
+                        </div>
+                        <div class="col-md-1 mb-3 offset-md-1">
+                            <label class="pwdExp" for="switch-passwordExpired">Password expired<input (change) = "getIsChecked_passwordExpired($event)" type="checkbox"  formControlName="passwordExpired" id="switch-passwordExpired" role="switch" /></label>
+                        </div>
+                        <div class="col-md-1 mb-3 offset-md-1">
+                            <label class ="accExp" for="switch-accountExpired">Account expired<input (change) = "getIsChecked_accountExpired($event)"  type="checkbox" formControlName="accountExpired"   id="switch-accountExpired" role="switch" /></label>
+                        </div>
+                    </div>
+                    <div *ngIf = "!isAnUpdate">
+                        <button type="button" class="btn btn-sm bg-info"  (click) = "on_create_user_clicked()">{{buttonName}}</button>
+                    </div>
+                    <div *ngIf = "isAnUpdate">
+                        <button type="button" class="btn btn-sm bg-info"  (click) = "on_update_user_clicked()">{{buttonName}}</button>
+                    </div>
+              </form>
+           </div>
+       </article>
+        <div class="card-footer alert alert-primary" role="alert">  
+        </div>
+     </div>
+  </div>
+</div>

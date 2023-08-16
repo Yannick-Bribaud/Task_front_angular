@@ -1,0 +1,28 @@
+
+.taskPage{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.card-header{
+    background-color: cyan;
+    color: rgb(100,90,0);
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.outer{ 
+    margin: 0;
+    padding: 40px;
+    background-image: url("src/assets/firstImag.avif");
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 900px;
+    
+  }
+
